@@ -1,0 +1,26 @@
+## Comandos Docker
+
+### Subir / Parar
+
+| Comando | Descrição |
+|---|---|
+| `docker-compose up --build` | Inicia os containers e reconstrói as imagens |
+| `docker-compose up` | Inicia os containers sem rebuild |
+| `docker-compose start` | Retoma containers parados sem criar novos |
+| `docker-compose stop` | Para os containers sem removê-los |
+| `docker-compose down` | Remove os containers, mantém os dados do banco |
+| `docker-compose down -v` | Remove containers **e** volumes (apaga dados) |
+
+### Monitorar / Debugar
+
+| Comando | Descrição |
+|---|---|
+| `docker ps` | Lista todos os containers em execução |
+| `docker-compose logs -f backend` | Logs em tempo real de um serviço |
+| `docker-compose exec backend bash` | Abre terminal dentro do container |
+| `docker stats` | Monitora CPU e memória em tempo real |
+
+
+### Matar o processo em caso de bug(Comandos escritos no PowerShell)
+
+taskkill /F /IM "Docker Desktop.exe"; taskkill /F /IM "dockerd.exe"; taskkill /F /IM "com.docker.backend.exe"
